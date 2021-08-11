@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         if (CurrentTurn != playerIndex || CurrentTurn == 0)
             return false;
 
-        if (board[slotIndex] == 0)
+        if (board[slotIndex] == Defines.EMPTY_SLOT)
         {
             board[slotIndex] = playerIndex;
             SwitchTurn();
@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
         {
             if (HasEmptySlot())
             {
-                CurrentTurn = CurrentTurn == 1 ? -1 : 1;
+                CurrentTurn = CurrentTurn == 1 ? Defines.PLAYER_2 : Defines.PLAYER_1;
             }
             else
             {
@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        CurrentTurn = 1;
+        CurrentTurn = Defines.PLAYER_1;
     }
 
     public static GameManager Instance { get; private set; }

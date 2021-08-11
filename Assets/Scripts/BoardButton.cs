@@ -39,7 +39,7 @@ public class BoardButton : MonoBehaviour
         
         if (GameManager.Instance.AssignSlot(currentTurn, index))
         {
-            buttonText.text = currentTurn == 1 ? "X" : "O";
+            buttonText.text = currentTurn == Defines.PLAYER_1 ? "X" : "O";
         }
     }
     
