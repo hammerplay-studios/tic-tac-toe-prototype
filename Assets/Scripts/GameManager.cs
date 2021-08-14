@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < board.Length; i++)
         {
-            if (board[i] == 0)
+            if (board[i] == Defines.EMPTY_SLOT)
                 return true;
         }
 
